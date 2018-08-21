@@ -8,9 +8,7 @@ patch_scan_bucket_name = sys.argv[2]
 dynamodb_table_name = sys.argv[3]
 csv_report_lambda_name = sys.argv[4]
 customer_cross_account_role_arn = sys.argv[5]
-
 dynamodb_client = boto3.client('dynamodb', 'us-east-1')
-
 
 def ca_assume_conn(type, service):
     sts_client = boto3.client('sts', customer_default_region)
