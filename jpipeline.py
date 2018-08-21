@@ -83,4 +83,9 @@ def lambda_handler(event, context):
 
 
 if __name__ == '__main__':
+    print(customer_default_region)
+    print(patch_scan_bucket_name)
+    print(dynamodb_table_name)
+    print(csv_report_lambda_name)
+    print(customer_cross_account_role_arn)
     lambda_handler(None, None)
