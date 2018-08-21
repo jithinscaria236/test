@@ -23,7 +23,7 @@ pipeline {
             steps {
 			
 			
-                  sh "python3 jpipeline.py ${params.customer_default_region} ${params.patch_scan_bucket_name} ${params.dynamodb_table_name} ${params.csv_report_lambda_name} ${params.customer_cross_account_role_arn} " 
+                  sh "python jpipeline.py ${params.customer_default_region} ${params.patch_scan_bucket_name} ${params.dynamodb_table_name} ${params.csv_report_lambda_name} ${params.customer_cross_account_role_arn} " 
 				  
             }
         }
