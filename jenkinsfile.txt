@@ -10,8 +10,8 @@ pipeline {
     stages {
         stage('Example') {
             steps {
-			def a=
-			def b=${params.BIOGRAPHY}
+			
+			
                   sh "python3 ${params.BIOGRAPHY} ${params.BIOGRAPHY}" 
             }
         }
