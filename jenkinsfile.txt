@@ -12,7 +12,7 @@ pipeline {
             steps {
 			
 			
-                  sh "python3 mytest.py ${params.BIOGRAPHY} ${params.BIOGRAPHY}" 
+                  sh "python3 mytest.py ${params.BIOGRAPHY} ${params.PERSON}" 
 				  
             }
         }
