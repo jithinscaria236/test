@@ -10,7 +10,9 @@ pipeline {
     stages {
         stage('Example') {
             steps {
-                  sh 'python3 mytest.py' 
+			def a=
+			def b=${params.BIOGRAPHY}
+                  sh "python3 ${params.BIOGRAPHY} ${params.BIOGRAPHY}" 
             }
         }
     }
