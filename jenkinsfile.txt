@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage('Example') {
             steps {
-                  sh 'python3 mytest.py' ${params.PERSON}  ${params.BIOGRAPHY}
+                  sh 'python3 mytest.py' 
             }
         }
     }
