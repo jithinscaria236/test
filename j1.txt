@@ -1,0 +1,31 @@
+
+
+ 
+ 
+
+
+
+pipeline {
+    agent any
+    parameters {
+        string(name: 'customer_default_region', defaultValue: 'us-west-2', description: 'Who should I say hello to?')
+		string(name: 'patch_scan_bucket_name', defaultValue: 'rean-ms-ssm-patchscan-outputs-windows', description: 'Who should I say hello to?')
+		string(name: 'dynamodb_table_name', defaultValue: 'rean-ms-ssm-patchscan-and-metadata-windows', description: 'Who should I say hello to?')
+		string(name: 'csv_report_lambda_name', defaultValue: 'rean-ms-ssm-dynamodb-to-csv-report-windows', description: 'Who should I say hello to?')
+		string(name: 'customer_cross_account_role_arn', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
+
+        
+        
+    }
+	
+    stages {
+        stage('Example') {
+            steps {
+			
+			
+                  sh "python3 jpipeline.py ${params.customer_default_region} ${params.patch_scan_bucket_name} ${params.dynamodb_table_name} ${params.csv_report_lambda_name} ${params.customer_cross_account_role_arn} " 
+				  
+            }
+        }
+    }
+}
