@@ -3,11 +3,11 @@ import time
 import os
 import sys
 
-customer_default_region = string(sys.argv[1])
-patch_scan_bucket_name = string(sys.argv[2])
-dynamodb_table_name = string(sys.argv[3])
-csv_report_lambda_name = string(sys.argv[4])
-customer_cross_account_role_arn = string(sys.argv[5])
+customer_default_region = str(sys.argv[1])
+patch_scan_bucket_name = str(sys.argv[2])
+dynamodb_table_name = str(sys.argv[3])
+csv_report_lambda_name = str(sys.argv[4])
+customer_cross_account_role_arn = str(sys.argv[5])
 dynamodb_client = boto3.client('dynamodb', 'us-east-1')
 
 def ca_assume_conn(type, service):
